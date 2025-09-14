@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Magic Download</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    background: radial-gradient(circle at center, #000428, #004e92);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  /* Center Download Button */
+  .download-btn {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #42a5f5, #1565c0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10;
+    box-shadow: 0 0 30px cyan, 0 0 60px blue;
+    animation: pulse 2s infinite;
+    text-decoration: none;
+  }
+
+  .download-btn:hover {
+    transform: scale(1.2);
+    box-shadow: 0 0 60px #00e5ff, 0 0 120px #00bfff;
+  }
+
+  /* Pulse Animation */
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+  }
+
+  /* Surrounding Magic Orbs */
+  .orb {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(0, 255, 255, 0.6);
+    animation: float 6s infinite ease-in-out alternate;
+  }
+
+  .orb:nth-child(1) { width: 40px; height: 40px; top: 10%; left: 20%; animation-duration: 5s; }
+  .orb:nth-child(2) { width: 25px; height: 25px; top: 80%; left: 30%; animation-duration: 7s; }
+  .orb:nth-child(3) { width: 50px; height: 50px; top: 60%; left: 75%; animation-duration: 4s; }
+  .orb:nth-child(4) { width: 35px; height: 35px; top: 20%; left: 70%; animation-duration: 6s; }
+  .orb:nth-child(5) { width: 20px; height: 20px; top: 40%; left: 10%; animation-duration: 8s; }
+  .orb:nth-child(6) { width: 45px; height: 45px; top: 75%; left: 55%; animation-duration: 5.5s; }
+
+  @keyframes float {
+    0% { transform: translateY(0) translateX(0) scale(1); opacity: 0.7; }
+    50% { transform: translateY(-30px) translateX(20px) scale(1.2); opacity: 1; }
+    100% { transform: translateY(0) translateX(0) scale(1); opacity: 0.7; }
+  }
+
+  /* Rotating Halo */
+  .halo {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    border: 2px dashed rgba(0, 255, 255, 0.5);
+    animation: spin 15s linear infinite;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+</style>
+</head>
+<body>
+
+  <!-- Magic Surroundings -->
+  <div class="halo"></div>
+  <div class="orb"></div>
+  <div class="orb"></div>
+  <div class="orb"></div>
+  <div class="orb"></div>
+  <div class="orb"></div>
+  <div class="orb"></div>
+
+  <!-- Download Button -->
+  <a href="https://singingfiles.com/show.php?l=0&u=1873981&id=71896" class="download-btn">⬇️</a>
+
+</body>
+</html>
